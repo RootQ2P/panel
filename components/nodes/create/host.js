@@ -46,7 +46,7 @@ export default function SelectHost({ setPage }) {
                         <Button variant="contained" color="info" sx={{ mt: 2 }} onClick={() => {
                             setSure(false);
                             setPage("cloudPlan");
-                        }} autoFocus>Use Didid Cloud</Button>
+                        }} autoFocus>Use Rizen  Cloud</Button>
                         <Button sx={{ mt: 1, color: "gray" }} onClick={() => {
                             setSure(false);
                             setPage("nodeInfo")
@@ -67,7 +67,7 @@ export default function SelectHost({ setPage }) {
                             <Nightlight sx={{ fontSize: "60px", color: "#ffb800", position: "absolute", ml: 3, zIndex: "1", rotate: "-30deg" }} />
                             <Cloud sx={{ fontSize: "30px", position: "absolute", ml: 8, mt: 3 }} />
                         </Grid>
-                        <Typography align="center" fontWeight={500} variant="h6" sx={{ position: "absolute", left: "38.5%", bottom: "56%", fontFamily: "Poppins", fontWeight: "bold" }}>Hye Cloud</Typography>
+                        <Typography align="center" fontWeight={500} variant="h6" sx={{ position: "absolute", left: "38.5%", bottom: "56%", fontFamily: "Poppins", fontWeight: "bold" }}>Rizen</Typography>
                         <CloudOutlined sx={{ position: "absolute", left: "30%", bottom: "39.5%", fontSize: "180px", color: "transparent", fill: "white" }} />
                         <Cloud sx={{ fontSize: "65px", position: "absolute", ml: 0, mb: 5, right: "15%", top: "13%" }} />
                         <Cloud sx={{ fontSize: "85px", zIndex: "30", position: "absolute", right: "2%", top: "30%" }} />

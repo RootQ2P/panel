@@ -85,7 +85,7 @@ const sleep = (ms) => {
         const domain = await prompts({
             type: "text",
             name: "value",
-            message: "What domain is ssl going to be running on? (e.g. ararat.hye.gg)"
+            message: "What domain is ssl going to be running on? (e.g. Rizen.didid.gg)"
         });
         envLocal += `PANEL_DOMAIN=${domain.value}\n`;
         fs.writeFileSync("./.env.local", envLocal);
@@ -102,7 +102,7 @@ const sleep = (ms) => {
     const url = await prompts({
         type: "text",
         name: "value",
-        message: "What url is this Ararat instance going to be running on? (e.g. https://ararat.hye.gg)"
+        message: "What url is this Ararat instance going to be running on? (e.g. https://Rizen.didid.gg)"
     });
     envLocal += `PANEL_URL=${url.value}\n`;
     fs.writeFileSync("./.env.local", envLocal);
