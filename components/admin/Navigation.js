@@ -50,7 +50,7 @@ export default function AdminNav({ children, ...props }) {
 				>
 					<Toolbar>
 						<Typography variant="h6" noWrap component="div">
-							Ararat
+							Rizen
 						</Typography>
 						<Typography variant="h6" noWrap component="div" sx={{ ml: .8 }} fontWeight={400}>
 							Administrator

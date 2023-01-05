@@ -1,5 +1,5 @@
 {
-  "name": "ararat",
+  "name": "Rizen",
   "version": "0.0.1",
   "prisma": {
     "seed": "node prisma/seed.js"

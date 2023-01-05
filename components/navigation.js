@@ -41,7 +41,7 @@ export default function Navigation({ children, ...props }) {
                                 <Menu />
                             </IconButton>
                         }
-                        <img src="/logo.png" style={{ width: "60px", marginRight: 5, marginTop: 5, marginBottom: "auto", justifyContent: "center" }} />
+                        <img src="https://media.discordapp.net/attachments/883885431714881556/1060336020094201926/Screenshot_2023-01-04_231626-removebg-preview.png" style={{ width: "60px", marginRight: 5, marginTop: 5, marginBottom: "auto", justifyContent: "center" }} />
                     </Grid>
 
                     <Button

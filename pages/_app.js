@@ -13,7 +13,7 @@ import { SWRConfig } from "swr";
 import nookies from "nookies";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-process.title = "Hye Ararat";
+process.title = " Rizen";
 import "../styles/globals.css"
 import "xterm/css/xterm.css"
 config.autoAddCss = false;

@@ -42,14 +42,14 @@ export default function Login() {
   return (
     <>
       <Head>
-        <title>Login | Ararat</title>
+        <title>Login | Rizen</title>
       </Head>
       <Container>
         <Grid container direction="column" justifyContent="center" alignItems="center" mt={30}>
           <Grid container direction="column" justifyContent="center" alignItems="center">
             <Image src={logo} width={160} height={85.16} />
             <Typography align="center" mt={1} variant="subtitle1">
-              Welcome to Ararat! Please login to continue.
+              Welcome to Rizen! Please login to continue.
             </Typography>
             <FormControl sx={{ m: 1, width: "40ch" }} variant="outlined">
               {loginErr && <Alert severity="error">{loginErr}</Alert>}

@@ -120,12 +120,12 @@ export default function Navigation({ children, ...props }) {
       async function img() {
         let img;
         try {
-          img = await axios.get(`https://images.ararat.hye.gg/findImageId?os=${imageData.os}&release=${imageData.release}&architecture=${imageData.architecture}&variant=${imageData.variant}`)
+          img = await axios.get(`https://images.Rizen.hye.gg/findImageId?os=${imageData.os}&release=${imageData.release}&architecture=${imageData.architecture}&variant=${imageData.variant}`)
         } catch {
           return
         }
         let imageId = img.data.id
-        const url = `https://images.ararat.hye.gg/accountServices/image/${imageId}/extensions?key=${cookies.access_token}&type=ararat`;
+        const url = `https://images.Rizen.hye.gg/accountServices/image/${imageId}/extensions?key=${cookies.access_token}&type=Rizen`;
         let extensions;
         try {
           extensions = await axios.get(url);
@@ -151,7 +151,7 @@ export default function Navigation({ children, ...props }) {
           })
         }
         extensions.data.extensions.map(async (ext) => {
-          const url2 = `https://images.ararat.hye.gg/accountServices/image/${imageId}/extensionInfo/${ext.name}?key=${cookies.access_token}&type=ararat`;
+          const url2 = `https://images.Rizen.hye.gg/accountServices/image/${imageId}/extensionInfo/${ext.name}?key=${cookies.access_token}&type=Rizen`;
           let extensionInfo = {
             ...ext,
             data: (await axios.get(url2)).data
@@ -159,7 +159,7 @@ export default function Navigation({ children, ...props }) {
           fullExtensions.push(extensionInfo);
           if (fullExtensions.length == extensions.data.extensions.length) {
             fullExtensions.map((ext) => {
-              if (ext.type != "ararat") {
+              if (ext.type != "Rizen") {
                 fullExtensions.splice(fullExtensions.indexOf(ext), 1)
               }
             })
@@ -198,7 +198,7 @@ export default function Navigation({ children, ...props }) {
                 </Grid> : ""}
               <Typography sx={{ mt: "auto", mb: "auto" }} variant="h6" noWrap component="div">
 
-                {props.page ? instance.data ? instance.data.name : "Ararat" : "Ararat"}
+                {props.page ? instance.data ? instance.data.name : "Rizen" : "Rizen"}
               </Typography>
             </Grid>
             {useMediaQuery(useTheme().breakpoints.up("sm")) ? props.page ? instance.data ?

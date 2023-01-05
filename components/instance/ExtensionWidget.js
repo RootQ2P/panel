@@ -6,7 +6,7 @@ import axios from "axios";
 
 function Widget({ widget, imageId }) {
     let cookies = nookies.get();
-    const url = `https://images.ararat.hye.gg/accountServices/image/${imageId}/widget/${widget}?key=${cookies.access_token}&type=ararat`;
+    const url = `https://images.Rizen.hye.gg/accountServices/image/${imageId}/widget/${widget}?key=${cookies.access_token}&type=Rizen`;
     const HelloWorld = ({ name }) => <RemoteComponent url={url} name={name} />;
     return (
         <div>
@@ -27,7 +27,7 @@ export default function ExtensionWidget({ image, widget }) {
     useEffect(() => {
         async function image() {
             try {
-                let img = await axios.get(`https://images.ararat.hye.gg/findImageId?os=${imageData.os}&release=${imageData.release}&architecture=${imageData.architecture}&variant=${imageData.variant}`)
+                let img = await axios.get(`https://images.Rizen.hye.gg/findImageId?os=${imageData.os}&release=${imageData.release}&architecture=${imageData.architecture}&variant=${imageData.variant}`)
                 setImageId(img.data.id)
             } catch (error) {
 

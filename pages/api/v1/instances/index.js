@@ -225,8 +225,8 @@ export default async function handler(req, res) {
                     ]
                 }]
             console.log(defaultLayout)
-            if (source.server == "https://images.ararat.hye.gg") {
-                let res = await axios.get("https://images.ararat.hye.gg/streams/v1/images.json");
+            if (source.server == "https://images.Rizen.hye.gg") {
+                let res = await axios.get("https://images.Rizen.hye.gg/streams/v1/images.json");
               
                 var images = Object.keys(res.data.products)
                 images = images.map(s => res.data.products[s])

@@ -17,13 +17,13 @@ const sleep = (ms) => {
             resolve();
         });
     }
-    await log("Hello! Welcome to Ararat!");
-    await log("This is the setup wizard for Ararat. It will help you configure your Ararat instance.");
+    await log("Hello! Welcome to Rizen!");
+    await log("This is the setup wizard for Rizen. It will help you configure your Rizen instance.");
     await log("Before we begin, please make sure you have either a PostgreSQL or CockroachDB database ready to use.");
     const dbReady = await prompts({
         type: "confirm",
         name: "value",
-        message: "Do you have a database ready for Ararat to seed?"
+        message: "Do you have a database ready for Rizen to seed?"
     })
     if (!dbReady.value) {
         await log("Please setup a database and then run this setup wizard again.");
@@ -81,7 +81,7 @@ const sleep = (ms) => {
     if (ssl.value == "true") {
         envLocal += `ssl=true\n`;
         fs.writeFileSync("./.env.local", envLocal);
-        await log("Cool! It should be noted that Ararat does setup SSL for you. You will not need to setup SSL yourself.");
+        await log("Cool! It should be noted that Rizen does setup SSL for you. You will not need to setup SSL yourself.");
         const domain = await prompts({
             type: "text",
             name: "value",
@@ -92,21 +92,21 @@ const sleep = (ms) => {
         execSync('sudo apt-get install -y nginx', { stdio: [0, 1, 2] })
         execSync('rm -f /etc/nginx/sites-enabled/default', { stdio: [0, 1, 2] })
         execSync('sudo apt-get install -y certbot python3-certbot-nginx', { stdio: [0, 1, 2] })
-        execSync('wget -O /etc/nginx/sites-enabled/ararat.conf https://raw.githubusercontent.com/Hye-Ararat/Ararat/master/ararat.conf', { stdio: [0, 1, 2] });
-        let conf = fs.readFileSync("/etc/nginx/sites-enabled/ararat.conf", "utf8");
+        execSync('wget -O /etc/nginx/sites-enabled/Rizen.conf https://raw.githubusercontent.com/Hye-Rizen/Rizen/master/Rizen.conf', { stdio: [0, 1, 2] });
+        let conf = fs.readFileSync("/etc/nginx/sites-enabled/Rizen.conf", "utf8");
         conf = conf.replaceAll("example.com", `${domain.value}`);
-        fs.writeFileSync("/etc/nginx/sites-enabled/ararat.conf", conf);
+        fs.writeFileSync("/etc/nginx/sites-enabled/Rizen.conf", conf);
         execSync(`sudo certbot --nginx -d ${domain.value} --agree-tos --no-redirect --register-unsafely-without-email -n`, { stdio: [0, 1, 2] });
         execSync('systemctl restart nginx', { stdio: [0, 1, 2] });
     }
     const url = await prompts({
         type: "text",
         name: "value",
-        message: "What url is this Ararat instance going to be running on? (e.g. https://Rizen.didid.gg)"
+        message: "What url is this Rizen instance going to be running on? (e.g. https://Rizen.didid.gg)"
     });
     envLocal += `PANEL_URL=${url.value}\n`;
     fs.writeFileSync("./.env.local", envLocal);
-    await log("✅ Great! Your Ararat instance is now configured.");
+    await log("✅ Great! Your Rizen instance is now configured.");
     await log("One last thing before we finish up.");
     const userAccount = await prompts({
         type: "confirm",
@@ -183,5 +183,5 @@ const sleep = (ms) => {
         })
         await log("✅ Great! Your account has been created.");
     }
-    await log("✅ Great! That's it. Your Ararat instance is now configured. You can get started by running npm run build and then npm run start.");
+    await log("✅ Great! That's it. Your Rizen instance is now configured. You can get started by running npm run build and then npm run start.");
 }());

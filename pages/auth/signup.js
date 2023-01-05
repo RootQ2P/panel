@@ -37,7 +37,7 @@ export default function SignUp() {
 	return (
 		<>
 			<Head>
-				<title>Sign Up | Ararat</title>
+				<title>Sign Up | Rizen</title>
 			</Head>
 			<Container>
 				<Grid
@@ -55,7 +55,7 @@ export default function SignUp() {
 					>
 						<Image src={logo} width={160} height={85.16} />
 						<Typography align="center" mt={1} variant="subtitle1">
-							Welcome to Ararat! Please Sign Up to continue.
+							Welcome to Rizen! Please Sign Up to continue.
 						</Typography>
 						<FormControl sx={{ m: 1, width: "40ch" }} variant="outlined">
 							<TextField

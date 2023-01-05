@@ -7,7 +7,7 @@ import { CircularProgress, Fade, Grid, Typography } from "@mui/material";
 
 function Extension({ extension, imageId }) {
     let cookies = nookies.get();
-    const url = `https://images.ararat.hye.gg/accountServices/image/${imageId}/extension/${extension}?key=${cookies.access_token}&type=ararat`;
+    const url = `https://images.Rizen.hye.gg/accountServices/image/${imageId}/extension/${extension}?key=${cookies.access_token}&type=Rizen`;
     const HelloWorld = ({ name }) => <RemoteComponent url={url} name={name} />;
     return (
         <HelloWorld name="TEST" />
@@ -26,7 +26,7 @@ export default function ExtensionPage({ image, extension }) {
     useEffect(() => {
         async function image() {
             try {
-                let img = await axios.get(`https://images.ararat.hye.gg/findImageId?os=${imageData.os}&release=${imageData.release}&architecture=${imageData.architecture}&variant=${imageData.variant}`)
+                let img = await axios.get(`https://images.Rizen.hye.gg/findImageId?os=${imageData.os}&release=${imageData.release}&architecture=${imageData.architecture}&variant=${imageData.variant}`)
                 setImageId(img.data.id)
             } catch (error) {
 

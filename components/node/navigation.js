@@ -115,7 +115,7 @@ export default function Navigation({ children, ...props }) {
                                 </Grid> : ""}
                             <Typography sx={{ mt: "auto", mb: "auto" }} variant="h6" noWrap component="div">
 
-                                {props.page ? node.data ? node.data.name : "Ararat" : "Ararat"}
+                                {props.page ? node.data ? node.data.name : "Rizen" : "Rizen"}
                             </Typography>
                         </Grid>
                         {useMediaQuery(useTheme().breakpoints.up("sm")) ? props.page ? node.data ?

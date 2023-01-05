@@ -97,7 +97,7 @@ export default function Dashboard({ data, user, canCreate }) {
   return (
     <>
       <Head>
-        <title>Dashboard | Ararat</title>
+        <title>Dashboard | Rizen</title>
       </Head>
       <Grid container direction="row">
         <Typography variant="h4" sx={{ mb: 1 }}>
