@@ -16,7 +16,6 @@
         "nodes": "Nodes",
         "networks": "Networks",
         "images": "Images",
-        "users": "Users",
-        "ranks": "Ranks"
+        "users": "Users"
     }
 }

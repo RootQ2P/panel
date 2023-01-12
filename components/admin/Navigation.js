@@ -22,7 +22,6 @@ import {
 	Code as ApiIcon,
 	Monitor as OverviewIcon,
 	Storage as NodesIcon,
-	Badge as RanksIcon,
 	ViewStream as DatabaseIcon,
 	People as UsersIcon,
 	Schedule as SchedulesIcon,
@@ -124,14 +123,6 @@ export default function AdminNav({ children, ...props }) {
 										<UsersIcon />
 									</ListItemIcon>
 									<ListItemText primary="Users" />
-								</ListItem>
-							</Link>
-							<Link href={``}>
-								<ListItem button selected={props.page == "ranks" ? true : false}>
-									<ListItemIcon>
-										<RanksIcon />
-									</ListItemIcon>
-									<ListItemText primary="Ranks" />
 								</ListItem>
 							</Link>
 							<Link href={`/admin/magma_cubes`}>

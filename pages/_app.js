@@ -22,7 +22,7 @@ NProgress.configure({ showSpinner: false });
 
 axios.interceptors.request.use(async (config) => {
 	if (process.browser) {
-		console.log("adslkfjas;lkfj")
+		console.log("Rizen By RHSCloud")
 		var running = false;
 		if (
 			!nookies.get(null).access_token &&

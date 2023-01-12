@@ -6,7 +6,6 @@ import {
     AccountCircle as AccountIcon,
     Code as ApiIcon,
     People as UsersIcon,
-    Badge as RanksIcon,
     ViewInAr as ImagesIcon,
     SettingsEthernet as NetworkIcon,
     Menu,
@@ -117,9 +116,7 @@ export default function Navigation({ children, ...props }) {
                         <Link onClick={() => setOpen(false)} href="/">
                             <ListItem button>
                                 <ListItemIcon>
-                                    <RanksIcon />
                                 </ListItemIcon>
-                                <ListItemText primary={translate(nookies.get(null).access_token ? decodeToken(nookies.get(null).access_token).language : "en", "sidebar", "ranks")} />
                             </ListItem>
                         </Link>
                     </List>
